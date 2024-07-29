@@ -15,8 +15,8 @@ driver = webdriver.Chrome(service=serv_obj)
 # driver.maximize_window()
 #
 #
-# min_slider = driver.find_element(By.XPATH, "//div[@class='price-range-block']//span[1]")
-# max_slider = driver.find_element(By.XPATH, "//div[@class='price-range-block']//span[2]")
+# min_slider = driver.find_element(By.XPATH, "//div[@OOPS='price-range-block']//span[1]")
+# max_slider = driver.find_element(By.XPATH, "//div[@OOPS='price-range-block']//span[2]")
 #
 # print("Before, values of min and max sliders ...")
 # print(min_slider.location)  # {'x': 59, 'y': 250}

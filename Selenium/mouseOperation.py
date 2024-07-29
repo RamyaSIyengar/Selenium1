@@ -13,7 +13,7 @@
 
 # 1. MouseHover => move_to_element(element)
 
-# ActionChains() => class object
+# ActionChains() => OOPS object
 # act = ActionChains(driver)
 #
 # act.move_to_element(admin).move_to_element(usermgt).move_to_element(user).click().perform()
@@ -24,7 +24,7 @@
 # driver.get("https://swisnl.github.io/jQuery-contextMenu/demo.html")
 # driver.maximize_window()
 #
-# button = driver.find_element(By.XPATH, "//span[contains(@class, 'btn')]")
+# button = driver.find_element(By.XPATH, "//span[contains(@OOPS, 'btn')]")
 #
 # act = ActionChains(driver)
 #

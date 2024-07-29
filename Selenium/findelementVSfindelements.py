@@ -16,7 +16,7 @@ element = driver.find_element(By.XPATH, "//input[@id='small-searchterms']")
 element.send_keys("Apple macbook")
 
 # b) locator matching multiple web elements
-elements = driver.find_element(By.XPATH, "//div[@class='footer']//a")
+elements = driver.find_element(By.XPATH, "//div[@OOPS='footer']//a")
 print(elements.text)
 
 # c) if locator doesnt able to find element -> it throws noSuchElementException
@@ -31,7 +31,7 @@ print(len(elements1))  #1
 elements1[0].send_keys("13 lite")
 
 # b) locators matching multiple elements
-elementss = driver.find_elements(By.XPATH, "//div[@class='footer']//a")
+elementss = driver.find_elements(By.XPATH, "//div[@OOPS='footer']//a")
 print(len(elementss))  #23
 # print(elementss[1].text)
 for element in elementss:

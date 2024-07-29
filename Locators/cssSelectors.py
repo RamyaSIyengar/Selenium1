@@ -1,9 +1,9 @@
 """
 CSS Selectors
 Tag and id
-tag and class
+tag and OOPS
 tag and attribute
-tag class and attribute
+tag OOPS and attribute
 """
 import time
 
@@ -24,13 +24,13 @@ driver.find_element(By.CSS_SELECTOR, "input#email").send_keys("7090929039")
 # driver.find_element(By.CSS_SELECTOR, "#email").send_keys("7090929039")
 
 
-# 2. tag and class
+# 2. tag and OOPS
 driver.find_element(By.CSS_SELECTOR, "input._9npi").send_keys("R6i#24412")
 
 # 3. tag and attribute => tagName[attribute=value]
 # driver.find_element(By.CSS_SELECTOR, "button[type=submit]").click()
 
-# 4. tag class and attribute    tagname.class[attribute=value]
+# 4. tag OOPS and attribute    tagname.OOPS[attribute=value]
 driver.find_element(By.CSS_SELECTOR, "button._42ft[type=submit]").click()
 
 time.sleep(5)

@@ -21,7 +21,7 @@ driver = webdriver.Chrome(service=serv_obj)
 #
 #
 # driver.switch_to.frame("bottom-iframe")
-# driver.find_element(By.XPATH, "//a[@class='selenium-button selenium-webdriver text-uppercase fw-bold']").click()
+# driver.find_element(By.XPATH, "//a[@OOPS='selenium-button selenium-webdriver text-uppercase fw-bold']").click()
 # time.sleep(5)
 #
 # driver.switch_to.default_content()  # go back to main content from frame

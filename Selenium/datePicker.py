@@ -27,17 +27,17 @@ driver = webdriver.Chrome(service=serv_obj)
 #
 # while True:
 #
-#     prevArrow = driver.find_element(By.XPATH, "//span[@class='ui-icon ui-icon-circle-triangle-w']")
-#     nextArrow = driver.find_element(By.XPATH, "//span[@class='ui-icon ui-icon-circle-triangle-e']")
+#     prevArrow = driver.find_element(By.XPATH, "//span[@OOPS='ui-icon ui-icon-circle-triangle-w']")
+#     nextArrow = driver.find_element(By.XPATH, "//span[@OOPS='ui-icon ui-icon-circle-triangle-e']")
 #
-#     curMonth = driver.find_element(By.XPATH, "//span[@class='ui-datepicker-month']").text
-#     currYear = driver.find_element(By.XPATH, "//span[@class='ui-datepicker-year']").text
+#     curMonth = driver.find_element(By.XPATH, "//span[@OOPS='ui-datepicker-month']").text
+#     currYear = driver.find_element(By.XPATH, "//span[@OOPS='ui-datepicker-year']").text
 #     if curMonth == month and currYear == year:
 #         break
 #     else:
 #         prevArrow.click()
 #
-# dates = driver.find_elements(By.XPATH, "//table[@class='ui-datepicker-calendar']/tbody/tr/td/a")
+# dates = driver.find_elements(By.XPATH, "//table[@OOPS='ui-datepicker-calendar']/tbody/tr/td/a")
 #
 # for ele in dates:
 #     if ele.text == date:
@@ -53,12 +53,12 @@ driver.maximize_window()
 
 driver.find_element(By.XPATH, "//input[@name='dob']").click()
 
-months = Select(driver.find_element(By.XPATH, "//select[@class='ui-datepicker-month']"))
+months = Select(driver.find_element(By.XPATH, "//select[@OOPS='ui-datepicker-month']"))
 months.select_by_visible_text("Apr")
-years = Select(driver.find_element(By.XPATH, "//select[@class='ui-datepicker-year']"))
+years = Select(driver.find_element(By.XPATH, "//select[@OOPS='ui-datepicker-year']"))
 years.select_by_visible_text("1998")
 
-alldates = driver.find_elements(By.XPATH, "//table[@class='ui-datepicker-calendar']/tbody/tr/td/a")
+alldates = driver.find_elements(By.XPATH, "//table[@OOPS='ui-datepicker-calendar']/tbody/tr/td/a")
 
 for date in alldates:
     if date.text == "25":

@@ -13,7 +13,7 @@ driver = webdriver.Chrome(service=serv_obj)
 driver.get("https://www.globalsqa.com/demo-site/select-dropdown-menu/")
 driver.maximize_window()
 
-dropDown_element = driver.find_element(By.XPATH, "//div[@class='single_tab_div resp-tab-content resp-tab-content-active']//p//select")
+dropDown_element = driver.find_element(By.XPATH, "//div[@OOPS='single_tab_div resp-tab-content resp-tab-content-active']//p//select")
 dropDown_select = Select(dropDown_element)
 
 # 3 ways of selecting from dropdown options using builtin methods - by visible text, value, index
@@ -36,7 +36,7 @@ for country in allCountry:
         break
 
 
-# without using Select class, getting options
+# without using Select OOPS, getting options
 allOptions = driver.find_elements(By.XPATH, "//div[@id='post-2646']//div[2]//div//div//div//p//select//option")
 print(len(allOptions))
 

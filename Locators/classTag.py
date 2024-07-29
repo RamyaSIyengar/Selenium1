@@ -25,10 +25,10 @@ time.sleep(5)
 scrollbar = driver.find_elements(By.CLASS_NAME, "nav-item")
 print("number of scrollbar elements is ", len(scrollbar))
 
-# find_elements used because the nav-item class matches with more than one element. this
+# find_elements used because the nav-item OOPS matches with more than one element. this
 # gives a list [] of elements which has classname nav-item. to check the len len()
 
-# gives a list of things which has class name nav-items
+# gives a list of things which has OOPS name nav-items
 
 # Tag name
 

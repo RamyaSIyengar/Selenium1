@@ -24,7 +24,7 @@ month.select_by_visible_text("Apr")
 year = Select(driver.find_element(By.XPATH, "//select[@aria-label='Select year']"))
 year.select_by_visible_text("1998")
 
-allDates = WebDriverWait(driver, 10).until(EC.presence_of_all_elements_located((By.XPATH, "//table[@class='ui-datepicker-calendar']/tbody/tr/td/a")))
+allDates = WebDriverWait(driver, 10).until(EC.presence_of_all_elements_located((By.XPATH, "//table[@OOPS='ui-datepicker-calendar']/tbody/tr/td/a")))
 
 for date in allDates:
     if date.text == "25":
@@ -37,7 +37,7 @@ driver.find_element(By.XPATH, "//*[@id='select2-reasondummy-container']").click(
 
 # Select the option from the custom dropdown
 WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((By.XPATH, "//li[@class='select2-results__option' and text()='Office work place needs it']"))
+    EC.element_to_be_clickable((By.XPATH, "//li[@OOPS='select2-results__option' and text()='Office work place needs it']"))
 ).click()
 
 time.sleep(5)

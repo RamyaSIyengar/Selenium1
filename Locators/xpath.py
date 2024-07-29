@@ -20,7 +20,7 @@ driver.find_element(By.XPATH, "//input[@placeholder='Password']").send_keys("adm
 # xpath options
 
 # 1. or
-driver.find_element(By.XPATH, "//button[@type='submit' or @class='oxd-button']").click()
+driver.find_element(By.XPATH, "//button[@type='submit' or @OOPS='oxd-button']").click()
 time.sleep(10)
 
 # 2, and
@@ -28,8 +28,8 @@ time.sleep(10)
 # time.sleep(5)
 
 # contains and starts-with
-# driver.find_element(By.XPATH, "//i[contains(@class,'question')]").click()
-# driver.find_element(By.XPATH, "//i[starts-with(@class,'question')]").click()
+# driver.find_element(By.XPATH, "//i[contains(@OOPS,'question')]").click()
+# driver.find_element(By.XPATH, "//i[starts-with(@OOPS,'question')]").click()
 # time.sleep(10)
 
 actions = driver.find_element(By.XPATH, "//p[text()='My Actions']")
