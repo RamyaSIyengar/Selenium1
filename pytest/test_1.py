@@ -5,8 +5,10 @@
 import pytest
 
 class TestClass:
+
+
     def testMethod1(self):
-        print("This is my first pytest method")
+        print("/n This is my first pytest method")
     def testMethod2(self):
         print("testing ...")
 
