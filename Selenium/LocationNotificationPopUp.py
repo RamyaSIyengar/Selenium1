@@ -6,6 +6,8 @@ from selenium.webdriver.common.by import By
 
 opt = webdriver.ChromeOptions()
 opt.add_argument("--disable-notifications")  # disables the location popup
+opt.add_argument("--headless")  # Run in headless mode
+
 
 serv_obj = Service("C:\Drivers\chromedriver-win64\chromedriver.exe")
 driver = webdriver.Chrome(service=serv_obj, options=opt)

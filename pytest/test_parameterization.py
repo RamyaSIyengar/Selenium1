@@ -18,7 +18,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 class TestLog:
     @pytest.mark.parametrize('user,pwd',
-                             [('Admin', 'admin123'), ('Admin', 'admin'), ('admin', 'admin123'), ('ad', 'ad')])
+                             [('Admin', 'admin123'), ('Admin', 'admin'), ('admin1', 'admin123'), ('ad', 'ad')])
     def test_login(self, user, pwd):
         self.serv_obj = Service("C:\Drivers\chromedriver-win64\chromedriver.exe")
         self.driver = webdriver.Chrome(service=self.serv_obj)

@@ -13,31 +13,31 @@ driver = webdriver.Chrome(service=serv_obj)
 driver.get("https://www.globalsqa.com/demo-site/select-dropdown-menu/")
 driver.maximize_window()
 
-dropDown_element = driver.find_element(By.XPATH, "//div[@OOPS='single_tab_div resp-tab-content resp-tab-content-active']//p//select")
+dropDown_element = driver.find_element(By.XPATH, "//div[@rel-title='Select Country']/p/select")
 dropDown_select = Select(dropDown_element)
 
-# 3 ways of selecting from dropdown options using builtin methods - by visible text, value, index
-dropDown_select.select_by_visible_text("India")
-dropDown_select.select_by_value("UGA")
-dropDown_select.select_by_index(20)
-
-# capture all options and print them
-allCountry = dropDown_select.options
-# print("Number of countries in the dropdown", len(allCountry))
-
+# # 3 ways of selecting from dropdown options using builtin methods - by visible text, value, index
+# dropDown_select.select_by_visible_text("India")
+# dropDown_select.select_by_value("UGA")
+# dropDown_select.select_by_index(20)
+#
+# # capture all options and print them
+# allCountry = dropDown_select.options
+# # print("Number of countries in the dropdown", len(allCountry))
+#
+# # for country in allCountry:
+# #     print(country.text)
+#
+#
+# # without using builtin method, select from dropDown
 # for country in allCountry:
-#     print(country.text)
-
-
-# without using builtin method, select from dropDown
-for country in allCountry:
-    if country.text == "Uruguay":
-        country.click()
-        break
-
-
-# without using Select OOPS, getting options
-allOptions = driver.find_elements(By.XPATH, "//div[@id='post-2646']//div[2]//div//div//div//p//select//option")
-print(len(allOptions))
-
-time.sleep(5)
+#     if country.text == "Uruguay":
+#         country.click()
+#         break
+#
+#
+# # without using Select OOPS, getting options
+# allOptions = driver.find_elements(By.XPATH, "//div[@id='post-2646']//div[2]//div//div//div//p//select//option")
+# print(len(allOptions))
+#
+# time.sleep(5)

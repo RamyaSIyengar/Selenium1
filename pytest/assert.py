@@ -1,0 +1,1 @@
+assertEqual('ra', 'ra')

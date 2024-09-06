@@ -6,12 +6,7 @@ from selenium import webdriver
 def setup(browser):
     # print("Launching browser")   # stage1
 
-    if browser == 'chrome':
-        from selenium.webdriver.chrome.service import Service
-        serv_obj = Service("C:\Drivers\chromedriver-win64\chromedriver.exe")
-        driver = webdriver.Chrome(service=serv_obj)
-
-    elif browser == 'edge':
+    if browser == 'edge':
         from selenium.webdriver.edge.service import Service
         serv_obj = Service("C:\Drivers\edgedriver_win64\msedgedriver.exe")
         driver = webdriver.Edge(service=serv_obj)
@@ -21,7 +16,12 @@ def setup(browser):
         serv_obj = Service("C:\Drivers\geckodriver-v0.34.0-win-aarch64\geckodriver.exe")
         driver = webdriver.Edge(service=serv_obj)
 
-    return driver
+    else:
+        from selenium.webdriver.chrome.service import Service
+        serv_obj = Service("C:\Drivers\chromedriver-win64\chromedriver.exe")
+        driver = webdriver.Chrome(service=serv_obj)
+
+    yield driver
 
 
 def pytest_addoption(parser):     # this will get the value for the browser from the Command line prompt
@@ -34,7 +34,7 @@ def browser(request):      # this will return the Browser value to setup method
 
 
 # customizing HTML report
-# it is hook for adding environment info to html report
+# it is Hook for adding environment info to html report
 def pytest_configure(config):
     config._metadata['Project Name'] = 'Orange HRM'
     config._metadata['Module Name'] = 'Login Module'

@@ -1,22 +1,22 @@
-# import time
-#
-# from selenium import webdriver
-# from selenium.webdriver import ActionChains
-# from selenium.webdriver.chrome.service import Service
-# from selenium.webdriver.common.by import By
-#
-# serv_obj = Service("C:\Drivers\chromedriver-win64\chromedriver.exe")
-# driver = webdriver.Chrome(service=serv_obj)
-# driver.implicitly_wait(10)
-#
+import time
+
+from selenium import webdriver
+from selenium.webdriver import ActionChains
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from webdriver_manager.chrome import ChromeDriverManager
+
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+driver.implicitly_wait(10)
+
 
 
 # 1. MouseHover => move_to_element(element)
 
 # ActionChains() => OOPS object
-# act = ActionChains(driver)
-#
-# act.move_to_element(admin).move_to_element(usermgt).move_to_element(user).click().perform()
+act = ActionChains(driver)
+
+act.move_to_element(admin).move_to_element(usermgt).move_to_element(user).click().perform()
 
 
 # 2. Right click
