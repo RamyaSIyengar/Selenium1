@@ -13,3 +13,14 @@ def test_divisible_by_3(input_value):
 
 def test_divisible_by_6(input_value):
     assert input_value % 6 == 0
+
+# Fixtures can be parameterized to run the same test with different data.
+@pytest.fixture(params=[('alia',35),('deepika',40)])
+def user_data(self,request):
+    return request.param
+
+def test_user(self, user_data):
+    name,age = user_data
+    assert isinstance(name, str)
+    assert isinstance(age, int)
+
